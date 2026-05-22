@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Character encoding for the webpage -->
+  <meta charset="UTF-8">
+
+  <!-- Makes the calculator responsive on mobile devices -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Title shown on the browser tab -->
+  <title>Calculator App</title>
+
+  <!-- Link to external CSS file -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Main calculator wrapper -->
+  <main class="calculator-wrapper">
+
+    <!-- Top section with calculator title and theme labels -->
+    <header class="calculator-top">
+      <h1>calc</h1>
+
+      <!-- Theme switch design only -->
+      <div class="theme-area">
+        <div class="theme-numbers">
+          <span>1</span>
+          <span>2</span>
+          <span>3</span>
+        </div>
+
+        <div class="theme-row">
+          <p>THEME</p>
+          <div class="theme-toggle">
+            <span></span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Calculator display area -->
+    <section class="calculator-screen" id="display">
+      0
+    </section>
+
+    <!-- Calculator button area -->
+    <section class="calculator-buttons">
+
+      <!-- Row 1 -->
+      <button class="btn number" data-value="7">7</button>
+      <button class="btn number" data-value="8">8</button>
+      <button class="btn number" data-value="9">9</button>
+      <button class="btn action" id="delete">DEL</button>
+
+      <!-- Row 2 -->
+      <button class="btn number" data-value="4">4</button>
+      <button class="btn number" data-value="5">5</button>
+      <button class="btn number" data-value="6">6</button>
+      <button class="btn operator" data-value="+">+</button>
+
+      <!-- Row 3 -->
+      <button class="btn number" data-value="1">1</button>
+      <button class="btn number" data-value="2">2</button>
+      <button class="btn number" data-value="3">3</button>
+      <button class="btn operator" data-value="-">-</button>
+
+      <!-- Row 4 -->
+      <button class="btn number" data-value=".">.</button>
+      <button class="btn number" data-value="0">0</button>
+      <button class="btn operator" data-value="/">/</button>
+      <button class="btn operator" data-value="*">x</button>
+
+      <!-- Bottom row -->
+      <button class="btn reset" id="reset">RESET</button>
+      <button class="btn equal" id="equal">=</button>
+
+    </section>
+  </main>
+
+  <!-- Link to external JavaScript file -->
+  <script src="js/script.js"></script>
+</body>
+</html>
