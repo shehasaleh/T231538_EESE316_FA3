@@ -8,7 +8,7 @@ const equalButton = document.getElementById("equal");
 const resetButton = document.getElementById("reset");
 const deleteButton = document.getElementById("delete");
 
-// Variables used to store the calculator input
+// Variables used to store calculator input
 let expression = "";
 let currentNumber = "";
 
@@ -20,6 +20,12 @@ function updateDisplay(value) {
 // Function to check if a value is an operator
 function isOperator(value) {
   return value === "+" || value === "-" || value === "*" || value === "/";
+}
+
+// Function to check if the last character is an operator
+function lastCharacterIsOperator() {
+  const lastCharacter = expression.slice(-1);
+  return isOperator(lastCharacter);
 }
 
 // Handle number and decimal button clicks
@@ -50,9 +56,7 @@ operatorButtons.forEach(function(button) {
     }
 
     // Replace the last operator if two operators are pressed one after another
-    const lastCharacter = expression.slice(-1);
-
-    if (isOperator(lastCharacter)) {
+    if (lastCharacterIsOperator()) {
       expression = expression.slice(0, -1) + operator;
     } else {
       expression += operator;
@@ -72,9 +76,7 @@ equalButton.addEventListener("click", function() {
     }
 
     // Do not calculate if the last character is an operator
-    const lastCharacter = expression.slice(-1);
-
-    if (isOperator(lastCharacter)) {
+    if (lastCharacterIsOperator()) {
       updateDisplay("Error");
       expression = "";
       currentNumber = "";

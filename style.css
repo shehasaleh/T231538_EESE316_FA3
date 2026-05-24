@@ -14,54 +14,361 @@ body {
   justify-content: center;
   align-items: center;
   padding: 20px;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Full screen rain background */
+.rain-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+}
+
+/* All raining symbols */
+.rain-background span {
+  position: absolute;
+  top: -80px;
+  font-size: 30px;
+  font-weight: 900;
+  opacity: 0.28;
+  animation-name: rain-fall;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  text-shadow: 0 0 10px currentColor;
+}
+
+/* Individual rain positions, colours, speeds, and delays */
+.rain-background span:nth-child(1) {
+  left: 3%;
+  color: #ffe53d;
+  animation-duration: 7s;
+  animation-delay: 0s;
+}
+
+.rain-background span:nth-child(2) {
+  left: 8%;
+  color: #94fff9;
+  animation-duration: 9s;
+  animation-delay: 1s;
+}
+
+.rain-background span:nth-child(3) {
+  left: 13%;
+  color: #ff6bcb;
+  animation-duration: 8s;
+  animation-delay: 2s;
+}
+
+.rain-background span:nth-child(4) {
+  left: 18%;
+  color: #a855f7;
+  animation-duration: 10s;
+  animation-delay: 3s;
+}
+
+.rain-background span:nth-child(5) {
+  left: 23%;
+  color: #00ff99;
+  animation-duration: 7.5s;
+  animation-delay: 1.5s;
+}
+
+.rain-background span:nth-child(6) {
+  left: 28%;
+  color: #ff9f1c;
+  animation-duration: 8.5s;
+  animation-delay: 2.5s;
+}
+
+.rain-background span:nth-child(7) {
+  left: 33%;
+  color: #00e0d1;
+  animation-duration: 9.5s;
+  animation-delay: 0.5s;
+}
+
+.rain-background span:nth-child(8) {
+  left: 38%;
+  color: #ffffff;
+  animation-duration: 8s;
+  animation-delay: 4s;
+}
+
+.rain-background span:nth-child(9) {
+  left: 43%;
+  color: #ff3d81;
+  animation-duration: 10.5s;
+  animation-delay: 3.5s;
+}
+
+.rain-background span:nth-child(10) {
+  left: 48%;
+  color: #ffe53d;
+  animation-duration: 7.8s;
+  animation-delay: 2.2s;
+}
+
+.rain-background span:nth-child(11) {
+  left: 53%;
+  color: #39ff14;
+  animation-duration: 9.2s;
+  animation-delay: 4.4s;
+}
+
+.rain-background span:nth-child(12) {
+  left: 58%;
+  color: #ff3131;
+  animation-duration: 8.9s;
+  animation-delay: 1.8s;
+}
+
+.rain-background span:nth-child(13) {
+  left: 63%;
+  color: #94fff9;
+  animation-duration: 7.2s;
+  animation-delay: 3.1s;
+}
+
+.rain-background span:nth-child(14) {
+  left: 68%;
+  color: #ffe53d;
+  animation-duration: 9.8s;
+  animation-delay: 0.8s;
+}
+
+.rain-background span:nth-child(15) {
+  left: 73%;
+  color: #ff6bcb;
+  animation-duration: 8.2s;
+  animation-delay: 2.9s;
+}
+
+.rain-background span:nth-child(16) {
+  left: 78%;
+  color: #00ff99;
+  animation-duration: 10.2s;
+  animation-delay: 1.2s;
+}
+
+.rain-background span:nth-child(17) {
+  left: 83%;
+  color: #a855f7;
+  animation-duration: 7.6s;
+  animation-delay: 3.7s;
+}
+
+.rain-background span:nth-child(18) {
+  left: 88%;
+  color: #ff9f1c;
+  animation-duration: 9.3s;
+  animation-delay: 2.4s;
+}
+
+.rain-background span:nth-child(19) {
+  left: 93%;
+  color: #00e0d1;
+  animation-duration: 8.7s;
+  animation-delay: 4.1s;
+}
+
+.rain-background span:nth-child(20) {
+  left: 97%;
+  color: #ffffff;
+  animation-duration: 10.7s;
+  animation-delay: 1.6s;
+}
+
+.rain-background span:nth-child(21) {
+  left: 6%;
+  color: #ff3d81;
+  animation-duration: 11s;
+  animation-delay: 5s;
+}
+
+.rain-background span:nth-child(22) {
+  left: 16%;
+  color: #39ff14;
+  animation-duration: 9.6s;
+  animation-delay: 4.6s;
+}
+
+.rain-background span:nth-child(23) {
+  left: 26%;
+  color: #94fff9;
+  animation-duration: 10.4s;
+  animation-delay: 3.9s;
+}
+
+.rain-background span:nth-child(24) {
+  left: 36%;
+  color: #ffe53d;
+  animation-duration: 8.4s;
+  animation-delay: 5.5s;
+}
+
+.rain-background span:nth-child(25) {
+  left: 46%;
+  color: #ff3131;
+  animation-duration: 9.4s;
+  animation-delay: 4.8s;
+}
+
+.rain-background span:nth-child(26) {
+  left: 56%;
+  color: #00e0d1;
+  animation-duration: 11.2s;
+  animation-delay: 2.7s;
+}
+
+.rain-background span:nth-child(27) {
+  left: 66%;
+  color: #ff9f1c;
+  animation-duration: 7.9s;
+  animation-delay: 6s;
+}
+
+.rain-background span:nth-child(28) {
+  left: 76%;
+  color: #ff6bcb;
+  animation-duration: 10.8s;
+  animation-delay: 5.2s;
+}
+
+.rain-background span:nth-child(29) {
+  left: 86%;
+  color: #a855f7;
+  animation-duration: 9.1s;
+  animation-delay: 6.4s;
+}
+
+.rain-background span:nth-child(30) {
+  left: 96%;
+  color: #39ff14;
+  animation-duration: 8.8s;
+  animation-delay: 5.8s;
+}
+
+.rain-background span:nth-child(31) {
+  left: 11%;
+  color: #ffe53d;
+  animation-duration: 12s;
+  animation-delay: 6.8s;
+}
+
+.rain-background span:nth-child(32) {
+  left: 31%;
+  color: #94fff9;
+  animation-duration: 10.9s;
+  animation-delay: 7.1s;
+}
+
+.rain-background span:nth-child(33) {
+  left: 51%;
+  color: #ff6bcb;
+  animation-duration: 11.6s;
+  animation-delay: 6.3s;
+}
+
+.rain-background span:nth-child(34) {
+  left: 71%;
+  color: #00ff99;
+  animation-duration: 9.9s;
+  animation-delay: 7.4s;
+}
+
+.rain-background span:nth-child(35) {
+  left: 91%;
+  color: #ffffff;
+  animation-duration: 12.3s;
+  animation-delay: 6.6s;
+}
+
+.rain-background span:nth-child(36) {
+  left: 41%;
+  color: #ff9f1c;
+  animation-duration: 10.1s;
+  animation-delay: 7.8s;
+}
+
+/* Falling rain animation */
+@keyframes rain-fall {
+  0% {
+    transform: translateY(-100px) rotate(0deg);
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 0.28;
+  }
+
+  50% {
+    opacity: 0.18;
+  }
+
+  100% {
+    transform: translateY(120vh) rotate(360deg);
+    opacity: 0;
+  }
 }
 
 /* Calculator main wrapper */
 .calculator-wrapper {
   width: 100%;
   max-width: 460px;
+  position: relative;
+  z-index: 2;
 }
 
-/* Top area containing title and theme switch */
+/* Top area containing title and GO!GO! area */
 .calculator-top {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
   color: #ffe53d;
   margin-bottom: 25px;
+  gap: 20px;
 }
 
 /* Calculator title */
 .calculator-top h1 {
-  font-size: 28px;
-  font-weight: 800;
+  font-size: 26px;
+  font-weight: 900;
+  color: #ffe53d;
+  text-shadow: 0 0 8px #be15f4;
+  line-height: 1.1;
 }
 
-/* Theme label area */
+/* GO!GO! label area */
 .theme-area {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
 }
 
-/* Numbers above theme toggle */
+/* Numbers above toggle */
 .theme-numbers {
   display: flex;
   gap: 15px;
   font-size: 11px;
   font-weight: bold;
-  margin-right: 8px;
+  margin-right: 47px;
   margin-bottom: 4px;
 }
 
-/* Theme row */
+/* Row containing GO!GO!, toggle, and cat */
 .theme-row {
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 10px;
 }
 
-/* Theme text */
+/* GO!GO! text */
 .theme-row p {
   font-size: 11px;
   font-weight: bold;
@@ -88,11 +395,18 @@ body {
   border-radius: 50%;
 }
 
+/* Cat icon next to GO!GO! under number 3 */
+.cat-icon {
+  font-size: 22px;
+  line-height: 1;
+  filter: drop-shadow(0 0 6px #94fff9);
+}
+
 /* Calculator display screen */
 .calculator-screen {
   width: 100%;
   min-height: 105px;
-  background-color: #1d0934;
+  background-color: rgba(29, 9, 52, 0.96);
   color: #ffe53d;
   border-radius: 10px;
   margin-bottom: 25px;
@@ -101,16 +415,18 @@ body {
   font-weight: 800;
   text-align: right;
   overflow-x: auto;
+  box-shadow: 0 0 20px rgba(190, 21, 244, 0.12);
 }
 
 /* Button container */
 .calculator-buttons {
-  background-color: #1d0934;
+  background-color: rgba(29, 9, 52, 0.96);
   padding: 25px;
   border-radius: 10px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 18px;
+  box-shadow: 0 0 20px rgba(190, 21, 244, 0.12);
 }
 
 /* General button style */
@@ -164,9 +480,13 @@ body {
 }
 
 /* Responsive design for tablets and small screens */
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   .calculator-wrapper {
     max-width: 380px;
+  }
+
+  .calculator-top h1 {
+    font-size: 20px;
   }
 
   .calculator-screen {
@@ -189,6 +509,11 @@ body {
   .reset {
     font-size: 17px;
   }
+
+  .rain-background span {
+    font-size: 22px;
+    opacity: 0.18;
+  }
 }
 
 /* Responsive design for mobile phones */
@@ -197,8 +522,22 @@ body {
     padding: 15px;
   }
 
+  .calculator-top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .theme-area {
+    align-items: flex-start;
+  }
+
+  .theme-numbers {
+    margin-left: 72px;
+    margin-right: 0;
+  }
+
   .calculator-top h1 {
-    font-size: 24px;
+    font-size: 19px;
   }
 
   .calculator-screen {
@@ -212,5 +551,10 @@ body {
   .btn {
     font-size: 21px;
     padding: 13px 8px;
+  }
+
+  .rain-background span {
+    font-size: 18px;
+    opacity: 0.12;
   }
 }

@@ -42,4 +42,4 @@ Another challenge was making the calculator responsive on smaller screens. I sol
 
 ## Live Demo
 
-Live demo link: Add your GitHub Pages, Netlify, or Vercel link here if available.
+Live demo link: https://shehasaleh.github.io/T231538_EESE316_FA3/
