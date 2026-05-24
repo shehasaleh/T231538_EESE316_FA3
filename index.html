@@ -1,21 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Character encoding for the webpage -->
+  <!-- This tells the browser to use normal text characters correctly -->
   <meta charset="UTF-8">
 
-  <!-- Makes the calculator responsive on mobile devices -->
+  <!-- This makes the website fit properly on phones, tablets, and computers -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Title shown on the browser tab -->
+  <!-- This is the title that appears on the browser tab -->
   <title>Sheha's Math Buster</title>
 
-  <!-- Correct link to external CSS file -->
+  <!-- This connects the HTML file to the CSS styling file -->
   <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
-  <!-- Full page raining numbers and operation symbols background -->
+  <!-- This section creates the falling number and operator symbols in the background -->
   <div class="rain-background">
     <span>7</span>
     <span>+</span>
@@ -55,75 +56,80 @@
     <span>=</span>
   </div>
 
-  <!-- Main calculator wrapper -->
+  <!-- This main container holds the whole calculator -->
   <main class="calculator-wrapper">
 
-    <!-- Top sectionO! area -->
+    <!-- This is the top part of the calculator with the title and GO!GO! section -->
     <header class="calculator-top">
+
+      <!-- Calculator name -->
       <h1>Sheha's Math Buster</h1>
 
-      <!-- GO!GO! display area with cat icon -->
+      <!-- This area contains the small numbers, GO!GO!, toggle design, and cat icon -->
       <div class="theme-area">
+
+        <!-- These are decorative numbers above the toggle -->
         <div class="theme-numbers">
           <span>1</span>
           <span>2</span>
           <span>3</span>
         </div>
 
+        <!-- This row holds the GO!GO! text, toggle, and cat icon -->
         <div class="theme-row">
           <p>GO!GO!</p>
 
-          <!-- Decorative toggle -->
+          <!-- This is only a decorative toggle switch -->
           <div class="theme-toggle">
             <span></span>
           </div>
 
-          <!-- Cat icon decoration next to GO!GO! -->
+          <!-- This is the cat icon next to GO!GO! -->
           <div class="cat-icon">🐱</div>
         </div>
       </div>
     </header>
 
-    <!-- Calculator display area -->
+    <!-- This is the calculator screen where numbers and answers are displayed -->
     <section class="calculator-screen" id="display">
       0
     </section>
 
-    <!-- Calculator button area -->
+    <!-- This section contains all the calculator buttons -->
     <section class="calculator-buttons">
 
-      <!-- Row 1 -->
+      <!-- First row of buttons -->
       <button class="btn number" data-value="7">7</button>
       <button class="btn number" data-value="8">8</button>
       <button class="btn number" data-value="9">9</button>
       <button class="btn action" id="delete">DEL</button>
 
-      <!-- Row 2 -->
+      <!-- Second row of buttons -->
       <button class="btn number" data-value="4">4</button>
       <button class="btn number" data-value="5">5</button>
       <button class="btn number" data-value="6">6</button>
       <button class="btn operator" data-value="+">+</button>
 
-      <!-- Row 3 -->
+      <!-- Third row of buttons -->
       <button class="btn number" data-value="1">1</button>
       <button class="btn number" data-value="2">2</button>
       <button class="btn number" data-value="3">3</button>
       <button class="btn operator" data-value="-">-</button>
 
-      <!-- Row 4 -->
+      <!-- Fourth row of buttons -->
       <button class="btn number" data-value=".">.</button>
       <button class="btn number" data-value="0">0</button>
       <button class="btn operator" data-value="/">/</button>
       <button class="btn operator" data-value="*">x</button>
 
-      <!-- Bottom row -->
+      <!-- Bottom row buttons -->
       <button class="btn reset" id="reset">RESET</button>
       <button class="btn equal" id="equal">=</button>
 
     </section>
   </main>
 
-  <!-- Correct link to external JavaScript file -->
-  js/script.jsscript>
+  <!-- This connects the HTML file to the JavaScript file -->
+  <script src="js/script.js"></script>
 </body>
 </html>
