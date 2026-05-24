@@ -1,11 +1,11 @@
-/* Reset default spacing on all elements */
+/* This removes default spacing from all elements */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Main page styling */
+/* This styles the whole page */
 body {
   min-height: 100vh;
   font-family: Arial, Helvetica, sans-serif;
@@ -18,7 +18,7 @@ body {
   position: relative;
 }
 
-/* Full screen rain background */
+/* This is the full-page background area for the raining symbols */
 .rain-background {
   position: fixed;
   top: 0;
@@ -30,7 +30,7 @@ body {
   z-index: 0;
 }
 
-/* All raining symbols */
+/* This styles each falling number or operator symbol */
 .rain-background span {
   position: absolute;
   top: -80px;
@@ -43,7 +43,7 @@ body {
   text-shadow: 0 0 10px currentColor;
 }
 
-/* Individual rain positions, colours, speeds, and delays */
+/* Each symbol below has its own position, colour, speed, and delay */
 .rain-background span:nth-child(1) {
   left: 3%;
   color: #ffe53d;
@@ -296,7 +296,7 @@ body {
   animation-delay: 7.8s;
 }
 
-/* Falling rain animation */
+/* This animation makes the symbols fall from top to bottom */
 @keyframes rain-fall {
   0% {
     transform: translateY(-100px) rotate(0deg);
@@ -317,7 +317,7 @@ body {
   }
 }
 
-/* Calculator main wrapper */
+/* This holds the full calculator */
 .calculator-wrapper {
   width: 100%;
   max-width: 460px;
@@ -325,7 +325,7 @@ body {
   z-index: 2;
 }
 
-/* Top area containing title and GO!GO! area */
+/* This styles the top section of the calculator */
 .calculator-top {
   display: flex;
   justify-content: space-between;
@@ -335,7 +335,7 @@ body {
   gap: 20px;
 }
 
-/* Calculator title */
+/* This styles the calculator title */
 .calculator-top h1 {
   font-size: 26px;
   font-weight: 900;
@@ -344,14 +344,14 @@ body {
   line-height: 1.1;
 }
 
-/* GO!GO! label area */
+/* This arranges the GO!GO! section */
 .theme-area {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
 }
 
-/* Numbers above toggle */
+/* This styles the small 1, 2, and 3 numbers */
 .theme-numbers {
   display: flex;
   gap: 15px;
@@ -361,21 +361,21 @@ body {
   margin-bottom: 4px;
 }
 
-/* Row containing GO!GO!, toggle, and cat */
+/* This places GO!GO!, the toggle, and the cat icon in one row */
 .theme-row {
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
-/* GO!GO! text */
+/* This styles the GO!GO! text */
 .theme-row p {
   font-size: 11px;
   font-weight: bold;
   letter-spacing: 1px;
 }
 
-/* Theme toggle design */
+/* This creates the dark rounded toggle shape */
 .theme-toggle {
   width: 65px;
   height: 24px;
@@ -387,7 +387,7 @@ body {
   align-items: center;
 }
 
-/* Theme toggle small circle */
+/* This creates the small blue circle inside the toggle */
 .theme-toggle span {
   width: 16px;
   height: 16px;
@@ -395,14 +395,14 @@ body {
   border-radius: 50%;
 }
 
-/* Cat icon next to GO!GO! under number 3 */
+/* This styles the cat icon */
 .cat-icon {
   font-size: 22px;
   line-height: 1;
   filter: drop-shadow(0 0 6px #94fff9);
 }
 
-/* Calculator display screen */
+/* This styles the calculator display screen */
 .calculator-screen {
   width: 100%;
   min-height: 105px;
@@ -418,7 +418,7 @@ body {
   box-shadow: 0 0 20px rgba(190, 21, 244, 0.12);
 }
 
-/* Button container */
+/* This creates the grid layout for the calculator buttons */
 .calculator-buttons {
   background-color: rgba(29, 9, 52, 0.96);
   padding: 25px;
@@ -429,7 +429,7 @@ body {
   box-shadow: 0 0 20px rgba(190, 21, 244, 0.12);
 }
 
-/* General button style */
+/* This styles all buttons */
 .btn {
   border: none;
   border-radius: 8px;
@@ -442,18 +442,18 @@ body {
   box-shadow: 0 4px 0 #871c9c;
 }
 
-/* Hover effect for buttons */
+/* This makes buttons slightly brighter when the mouse is over them */
 .btn:hover {
   filter: brightness(1.2);
 }
 
-/* Active click effect */
+/* This gives a button press effect when clicked */
 .btn:active {
   transform: translateY(3px);
   box-shadow: 0 1px 0 #871c9c;
 }
 
-/* Delete button */
+/* This styles the DEL button */
 .action {
   background-color: #8631af;
   color: white;
@@ -461,7 +461,7 @@ body {
   box-shadow: 0 4px 0 #be15f4;
 }
 
-/* Reset button */
+/* This styles the RESET button and makes it take two columns */
 .reset {
   grid-column: span 2;
   background-color: #8631af;
@@ -470,7 +470,7 @@ body {
   box-shadow: 0 4px 0 #be15f4;
 }
 
-/* Equal button */
+/* This styles the equal button and makes it take two columns */
 .equal {
   grid-column: span 2;
   background-color: #94fff9;
@@ -479,7 +479,7 @@ body {
   box-shadow: 0 4px 0 #6cf9f2;
 }
 
-/* Responsive design for tablets and small screens */
+/* This changes the layout for tablets and smaller screens */
 @media (max-width: 700px) {
   .calculator-wrapper {
     max-width: 380px;
@@ -516,7 +516,7 @@ body {
   }
 }
 
-/* Responsive design for mobile phones */
+/* This changes the layout for very small phone screens */
 @media (max-width: 380px) {
   body {
     padding: 15px;
